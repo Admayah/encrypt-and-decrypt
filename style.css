@@ -1,0 +1,51 @@
+.ui-interface-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+  .ui-interface-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  #input-field-area {
+    width: 100%;
+  }
+  .button-wrapper{
+      padding: 10px 0;
+  }
+  .btn {
+    color: white;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+  }
+  .encrypt-btn {
+    background-color: green;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .decrypt-btn {
+    background-color: blue;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      .button-wrapper{
+          padding: 0 10px;
+      }
+    .btn {
+        margin: 0;
+      margin-top: 20px;
+    }
+    .encrypt-btn {
+      width: 100%;
+      display: block;
+     
+    }
+    .decrypt-btn {
+      width: 100%;
+      display: block;
+    }
+  }
+  
