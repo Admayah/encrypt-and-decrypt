@@ -1,7 +1,5 @@
-.ui-interface-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
+body{
+      background-color: #000;
   }
   .ui-interface-wrapper {
     width: 70%;
@@ -24,7 +22,6 @@
   .encrypt-btn {
     background-color: green;
     margin-left: 0;
-    padding-left: 0;
   }
   .decrypt-btn {
     background-color: blue;

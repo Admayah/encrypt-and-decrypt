@@ -9,17 +9,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="ui-interface-container">
       <div class="ui-interface-wrapper">
         <div class="input-field-wrapper">
           <textarea name="input-field" id="input-field-area" cols="" rows="6"></textarea>
         </div>
         <div class="button-wrapper">
-          <button class="btn encrypt-btn">ENCRYPT</button>
-          <button class="btn decrypt-btn">DECRYPT</button>
+          <button class="btn encrypt-btn" onclick="encryption()">ENCRYPT</button>
+          <button class="btn decrypt-btn" onclick="decryption()">DECRYPT</button>
         </div>
       </div>
-    </div>
 
+
+    <script>
+            const encryptTextInput = document.getElementById("input-field-area")
+
+
+        let encryptText;
+
+        function encryption(){
+            encryptText = window.btoa((encryptTextInput).value)
+            encryptTextInput.value = encryptText
+        }
+
+        let decryptText;
+
+        function decryption(){
+            decryptText = window.atob(encryptText)
+            encryptTextInput.value = decryptText
+        }    
+    </script>
   </body>
 </html>
