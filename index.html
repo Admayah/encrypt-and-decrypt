@@ -14,27 +14,38 @@
           <textarea name="input-field" id="input-field-area" cols="" rows="6"></textarea>
         </div>
         <div class="button-wrapper">
-          <button class="btn encrypt-btn" onclick="encryption()">ENCRYPT</button>
-          <button class="btn decrypt-btn" onclick="decryption()">DECRYPT</button>
+          <button class="btn encrypt-btn">ENCRYPT</button>
+          <button class="btn decrypt-btn" >DECRYPT</button>
         </div>
+
+        <div class="encrypted-message-container"></div>
       </div>
 
 
     <script>
-            const encryptTextInput = document.getElementById("input-field-area")
+            const encryptTextInput = document.querySelector("#input-field-area")
+            let encryptedMessageContainer = document.querySelector(".encrypted-message-container")
+            const encryptButton = document.querySelector(".encrypt-btn")
+            const decryptButton = document.querySelector(".decrypt-btn")
 
+           
+            encryptButton.addEventListener("click", Encryption)
+            decryptButton.addEventListener("click", Decryption)
 
-        let encryptText;
+        function Encryption(){
+          let encryptText = document.createTextNode(encryptTextInput.value)
 
-        function encryption(){
-            encryptText = window.btoa((encryptTextInput).value)
-            encryptTextInput.value = encryptText
+          encryptedMessageContainer.appendChild(encryptText)
+          let encryptTexts = window.btoa(encryptedMessageContainer.innerHTML)
+          encryptedMessageContainer.innerHTML = encryptTexts
+          encryptTextInput.value = ""
         }
 
-        let decryptText;
+       
 
-        function decryption(){
-            decryptText = window.atob(encryptText)
+        function Decryption(){
+          let decryptText;
+            decryptText = window.atob(encryptedMessageContainer.innerHTML)
             encryptTextInput.value = decryptText
         }    
     </script>

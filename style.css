@@ -26,6 +26,10 @@ body{
   .decrypt-btn {
     background-color: blue;
   }
+
+  .encrypted-message-container{
+    background-color: #fff;
+  }
   
   @media only screen and (max-width: 768px) {
       .button-wrapper{
